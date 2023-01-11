@@ -5,7 +5,13 @@ function testFunction () {
 }
 
 function capitalize (string) {
-
+    if (!(typeof string === 'string')) {
+        string = string.toString();
+    }
+    if (string.length === 0) {
+        return 'Empty String';
+    }
+    return string.slice(0, 1).toUpperCase() + string.slice(1);
 }
 
 function reverseString (string) {
